@@ -14,10 +14,8 @@ RUN apt-get update && apt-get install -y \
 # Install Snyk CLI
 RUN npm install -g snyk
 
-snyk auth $SNYK_TOKEN
-
 # Set a working directory
 WORKDIR /app
 
 # This will be the default command to execute when running the container
-CMD [ "snyk", "test" ]
+CMD [ "snyk", "test"]
